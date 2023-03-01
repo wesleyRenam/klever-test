@@ -17,7 +17,7 @@ function Home() {
 
   // Lista de balances no LocalStorage
   const htmlBalance = tokens.map((eachToken) => 
-  <div className="m-3" key={eachToken.token}>
+  <div className="m-3 mr-0" key={eachToken.token}>
     <h1 className="text-white font-bold text-3xl flex justify-end">
       {Number(eachToken.balance).toLocaleString('pt-br', {minimumFractionDigits: 2})}
     </h1>

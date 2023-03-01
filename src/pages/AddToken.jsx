@@ -7,8 +7,8 @@ function AddToken() {
   //Utilizando state para guardar os valores digitados no input
   const [alert, setAlert] = useState(false);
   const [error, setError] = useState(false)
-  const [token, setToken] = useState(null)
-  const [balance, setBalance] = useState(null)
+  const [token, setToken] = useState('')
+  const [balance, setBalance] = useState('')
   const navigate = useNavigate()
   const saveToken = () => {
     // Colocando o token em um objeto para facilitar a manipulação
@@ -16,7 +16,7 @@ function AddToken() {
     // Pegando todos os valores já existentes no localStorage, se for null ou undefined coloca um array vazio
     const pushArray = JSON.parse(localStorage.getItem("tokens")) ?? []
      //Verificando se tem algum valor no campo de Token.
-    if(token === null || balance === null) {
+    if(token === '' || balance === '') {
       setError(true)
       //Verifico com o Some se existe algum token com o nome igual, uso um if para decidir.
     } else if(pushArray.some((eachArrayToken) => eachArrayToken.token === token)) {
