@@ -1,9 +1,8 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react';
-import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Home from '../pages/Home';
 import AddToken from '../pages/AddToken';
-import EditToken from '../pages/EditToken';
 
 
 describe('Testando a página Home', () => {
