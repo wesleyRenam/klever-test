@@ -33,17 +33,17 @@ function AddToken() {
   return (
     <div className='bg-backG h-screen w-screen items-center flex flex-col'>
       <Link to='/' className='justify-center flex w-52 mb-16 mt-10'>
-            <img src={logo} alt="Logo Klever" aria-label="logoKlever"/>
+            <img src={logo} alt="Logo Klever" data-testid="logoAdd"/>
       </Link>
       <div className='flex w-1/3 rounded-xl flex-col '>
         <div className='flex justify-between items-center'>
           <div className='flex items-center justify-between'>
-            <img src={star} alt="Estrela" className='w-12' aria-label='estrelaLogo'/>
-            <h1 className='text-white font-bold text-5xl' aria-label='wishH1'>Wish Wallet</h1>
+            <img src={star} alt="Estrela" className='w-12' data-testid='estrelaLogoAdd'/>
+            <h1 className='text-white font-bold text-5xl' data-testid='wishH1Add'>Wish Wallet</h1>
           </div>
         </div>
         <div className='flex m-10 justify-between items-center'>
-          <h1 className='text-white font-bold text-2xl	'>Add Token</h1>
+          <h1 className='text-white font-bold text-2xl'>Add Token</h1>
           <Link to='/' data-testid="buttonBack" className='font-bold text-white bg-cinza p-2 px-9 rounded-lg text-sm'>Voltar</Link> 
         </div>
         {/* Div de alerta que só aparece quando o state 'alert' está ativo */}
@@ -94,8 +94,8 @@ function AddToken() {
               />
             </label>
           </fieldset>
-          <div className='flex w-full text-red-500 '>
-            {error && <small>Todos os campos devem estar preenchidos.</small>}
+          <div data-testid="errorInput" className='flex w-full text-red-500 '>
+            {error && <small >Todos os campos devem estar preenchidos.</small>}
           </div>
         </form> 
         
